@@ -2,11 +2,6 @@
 console.log("Hello World")
 
 // Rock Paper Scissors game with the computer
-
-// Score variables;
-let humanScore = 0;
-let computerScore = 0;
-
 // Computers Logic: Function to randomly pick between rock, paper and scissors.
 
 function getComputerChoice() {
@@ -50,4 +45,39 @@ function getHumanChoice() {
 let humanSelection = getHumanChoice();
 
 console.log("Human:", humanSelection);
+
+// Score variables;
+let humanScore = 0;
+let computerScore = 0;
+
+// Play one round Logic:
+function playRound(humanChoice, computerChoice) {
+
+    // Make human choice case-insensitive
+    humanChoice = humanChoice.toLowerCase();
+
+    // Check for a draw
+    if (humanChoice === computerChoice) {
+        console.log(`It's a draw! Both chose ${humanChoice}.`);
+    }
+
+    // Check if the human wins
+    else if (
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")
+    ) {
+        humanScore++;
+        console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
+    }
+
+    // Otherwise, the computer wins
+    else {
+        computerScore++;
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
+    }
+
+    // Display current scores
+    console.log(`Score — Human: ${humanScore}, Computer: ${computerScore}`);
+}
 
