@@ -2,6 +2,11 @@
 console.log("Hello World")
 
 // Rock Paper Scissors game with the computer
+
+// Score variables;
+let humanScore = 0;
+let computerScore = 0;
+
 // Computers Logic: Function to randomly pick between rock, paper and scissors.
 
 function getComputerChoice() {
