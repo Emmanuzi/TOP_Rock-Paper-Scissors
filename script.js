@@ -55,6 +55,7 @@ function playRound(humanChoice, computerChoice) {
 
     // Make human choice case-insensitive
     humanChoice = humanChoice.toLowerCase();
+    computerChoice= computerChoice.toLowerCase();
 
     // Check for a draw
     if (humanChoice === computerChoice) {
@@ -80,4 +81,3 @@ function playRound(humanChoice, computerChoice) {
     // Display current scores
     console.log(`Score — Human: ${humanScore}, Computer: ${computerScore}`);
 }
-
