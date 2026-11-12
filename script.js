@@ -19,9 +19,6 @@ function getComputerChoice() {
     }
 }
 
-// Calling the function
-console.log("Computer:", getComputerChoice());
-
 // Human Logic: Function to prompt and return user input.
 
 function getHumanChoice() {
@@ -40,12 +37,6 @@ function getHumanChoice() {
         return "Invalid choice";
     }
 }
-
-// Calling the function
-let humanSelection = getHumanChoice();
-
-console.log("Human:", humanSelection);
-
 // Score variables;
 let humanScore = 0;
 let computerScore = 0;
@@ -81,3 +72,5 @@ function playRound(humanChoice, computerChoice) {
     // Display current scores
     console.log(`Score — Human: ${humanScore}, Computer: ${computerScore}`);
 }
+
+playRound(getHumanChoice(), getComputerChoice());
